@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Display</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/common_css.css">
+    <style>
+        .button-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .button-list li {
+            margin-bottom: 10px;
+        }
+
+        .button-list button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Price List</h1>
+    </header>
+
+    <div id="buttons-container" class="container mt-4">
+        <ul class="button-list"></ul>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- Add image inside the body of modal -->
+                <div class="modal-body">
+                    <img id="image" src="" width="100%" alt="Click on button" />
+                </div>
+
+                <div class="modal-footer">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Image Number</th>
+                                <th>Image Name</th>
+                                <th>Information</th>
+                            </tr>
+                        </thead>
+                        <tbody id="image-info">
+                            <!-- Content will be added dynamically -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adding scripts to use Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
